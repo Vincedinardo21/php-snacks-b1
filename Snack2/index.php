@@ -6,9 +6,9 @@
     $numberChars = strlen($name);
     $positionChioc = strpos($email, "@");
     if($numberChars > 3 || is_numeric($age) || $positionChioc !== false && strpos($email, ".", $positionChioc)){
-        $result = "Accesso consentito";
+        $result = "Accesso riuscito";
     } else {
-        $result = "Accesso NON consentito";
+        $result = "Accesso negato";
     }
 
     var_dump($numberChars);
