@@ -4,7 +4,8 @@
     $age = $_GET["age"];
 
     $numberChars = strlen($name);
-    if($numberChars > 3 || is_numeric($age)){
+    $positionChioc = strpos($email, "@");
+    if($numberChars > 3 || is_numeric($age) || $positionChioc !== false && strpos($email, ".", $positionChioc)){
         $result = "Accesso consentito";
     } else {
         $result = "Accesso NON consentito";
